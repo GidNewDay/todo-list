@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div style="display: none">
+      <svg>
+        <symbol id="edit" fill="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15 6l1.5-1.5a1.414 1.414 0 112 2L17 8l-2-2zM7.747 20H20a1 1 0 000-2H9.828l-1.505 1.506c-.18.18-.372.344-.576.494zM7 18l9-9-2-2-9.407 8.936a3 3 0 00-.818 1.351l-.486 1.702a.5.5 0 00.678.597l.173-.075.391-.167.738-.317.101-.043.599-.256m.94-.637l.09-.091-.09.091z"
+            fill="currentColor"
+          ></path>
+        </symbol>
+      </svg>
+    </div>
+    <section>
+      <h1>Чек-листы</h1>
+      <div class="actions">
+        <div class="filter" id="filter">
+          <button class="fbutton active" id="all">Все задачи</button>
+          <button class="fbutton" id="current">Активные</button>
+          <button class="fbutton" id="done">Выполненные</button>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h2 class="flex">
+          <input
+            type="text"
+            class="new-checklist-title"
+            style="display: none"
+            
+          />
+          <span class="checklist-title">Чек-лист 1</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="grey rename-checklist"
+          >
+            <use xlink:href="#edit"></use>
+          </svg>
+        </h2>
+        <ul class="todo-container" id="todo-container">
+          <li>
+            <div class="todo">
+              <input type="checkbox" class="todo-checkbox" id="check-1" checked="checked" />
+              <label for="check-1">
+                <p>Задача 1</p>
+                <small>описание к задаче 1</small>
+              </label>
+            </div>
+            <div class="flex">
+              <button class="todo-delete"><i>&#x2718;</i></button>
+            </div>
+          </li>
+          <li>
+            <div class="todo">
+              <input
+                type="checkbox"
+                class="todo-checkbox"
+                id="check-2"
+              />
+              <label for="check-2">
+                <p>Задача 2</p>
+                <small>описание к задаче 2</small>
+              </label>
+            </div>
+            <div class="flex">
+              <button class="todo-delete"><i>&#x2718;</i></button>
+            </div>
+          </li>
+        </ul>
+        <div class="input-container">
+          <input type="text" id="todo-input" placeholder="Введите задачку" />
+          <input type="text" id="todo-desc" placeholder="Добавьте описание" />
+          <button class="add-button"><i class="">&#x2714;</i></button>
+        </div>
+        <div class="p-20 add-task-link">+ добавить пункт</div>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
